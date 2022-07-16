@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width,initial-scale=1.0">
+        <title>JavaScript</title>
+        <link rel="stylesheet" href="styles.css">
+            <script src="https://kit.fontawesome.com/c752b78af3.js" crossorigin="anonymous"></script>
+        
+    </head>
+
+    <body>
+
+        <!--start navigation bar-->
+        <header id="header">
+			<a href="a" class="logo">CRASH</a>
+			<div id="toggle"></div>
+			<div id="navbar">
+				<ul> 
+	                <li><a href="#html" class="html">HTML</a></li>
+	                <li><a href="#css" class="css">CSS</a></li>
+	                <li><a href="#javascript" class="javascript">JavaScript</a></li>
+	                <li><a href="#php" class="php">PHP</a></li>
+	                <li><a href="#mysql" class="mysql">MySQL</a></li>
+
+	            </ul>
+			</div>
+		</header>
+
+        <!--end nav bar-->
+
+        <script >
+			const header=document.getElementById('header');
+			const toggle= document.getElementById('toggle');
+			const navbar= document.getElementById('navbar');
+
+			document.onclick=function(e){
+			if(e.target.id!=='header' && e.target.id!=='toggle' && e.target.id!==navbar){
+				toggle.classList.remove('active');
+				navbar.classList.remove('active');
+											}
+										}
+
+			toggle.onclick=function(){
+				toggle.classList.toggle('active');
+				navbar.classList.toggle('active');
+			}
+		</script>
+        
+        <main id="main-id">
+ 
+                <section class="main-section" id="html">
+                    
+                    <div id="topic">What is HTML?</div>
+                   
+                        <div id="article" class="article">
+                                <p>HTML is a markup language that defines the structure of your content. HTML consists of a series of elements, which you use to enclose, or wrap, different parts of the content to make it appear a certain way, or act a certain way. The enclosing tags can make a word or image hyperlink to somewhere else, can italicize words, can make the font bigger or smaller, and so on. For example, take the following line of content:</p>
+                                    <code>My cat is very grumpy</code>
+                                <p>If we wanted the line to stand by itself, we could specify that it is a paragraph by enclosing it in paragraph tags:</p>
+                                <code> &lt;p&gt; My cat is very grumpy &lt;p&gt;</code>
+                        </div>
+        
+                        <div id="topic">Nesting Elements</div>
+
+                        <div id="article" class="article">
+                                <p>You can put elements inside other elements too — this is called nesting. If we wanted to state that our cat is very grumpy, we could wrap the word "very" in a &lt;strong&gt; element, which means that the word is to be strongly emphasized:</p>
+                                   
+                                <code>&lt;p&gt;My cat is &lt;p&gt;strong&lt;p&gt; very grumpy.&lt;p&gt;</code>                                  
+                        </div>
+
+                        <div id="topic">Empty ELements</div>
+
+                        <div id="article" class="article">
+                            <p>Some elements have no content and are called empty elements. Take the &lt;img&gt; element that we already have in our HTML page:</p>
+                                    <code>&lt;img src="images/firefox-icon.png" alt="My test image"&gt;</code>
+                                    <p>This contains two attributes, but there is no closing &lt;img&gt; tag and no inner content. This is because an image element doesn't wrap content to affect it. Its purpose is to embed an image in the HTML page in the place it appears.</p>
+                       </div>
+
+                    <div id="topic">Marking Up Text</div>
+                        <div id="article" class="article">
+                            <p>This section will cover some of the essential HTML elements you'll use for marking up the text.</p>
+                            <h2>Heading</h2>
+                                <p>Heading elements allow you to specify that certain parts of your content are headings — or subheadings. In the same way that a book has the main title, chapter titles, and subtitles, an HTML document can too. HTML contains 6 heading levels, &lt;&gt; - &lt;h6&gt;, although you'll commonly only use 3 to 4 at most:
+                                    <code>
+                                        &lt;h1&gt; My main title &lt;h1&gt;
+                                        &lt;h2&gt; My top level heading &lt;h2&gt;
+                                        &lt;h3&gt; My subheading &lt;h3&gt;
+                                        &lt;h4&gt; My sub-heading &lt;h4&gt;
+                                    </code>
+                                  
+                        </div>
+
+                </section>
+
+                <!--End HTML-->
+
+                <!--<hr id="#hr">-->
+                <section class="main-section" id="css">
+                    <div id="topic">What is CSS ?</div>
+                        <div id="article" class="article">
+                          <p>CSS (Cascading Style Sheets) allows you to create great-looking web pagesCSS is a language for specifying how documents are presented to users — how they are styled, laid out, etc.</p>
+
+                        </div>
+
+                <div id="topic">CSS</div>
+                        <div id="article" class="article">
+                            <p>CSS is a rule-based language — you define the rules by specifying groups of styles that should be applied to particular elements or groups of elements on your web page.</p>
+                            <p>For example, you can decide to have the main heading on your page to be shown as large red text. The following code shows a very simple CSS rule that would achieve the styling described above:</p>
+                                <code>h1 {
+                                    color: red;
+                                    font-size: 5em;
+                                }</code>
+                            <p>A CSS stylesheet will contain many such rules, written one after the other.</p>
+                                <code>h1 {
+                                    color: red;
+                                    font-size: 5em;
+                                }
+                                
+                                p {
+                                    color: black;
+                                }</code>
+
+                        </div>
+                    
+                <div id="topic">CSS Modules</div>
+                        <div id="article" class="article">
+                            <p>As there are so many things that you could style using CSS, the language is broken down into modules. You'll see reference to these modules as you explore MDN. Many of the documentation pages are organized around a particular module. For example, you could take a look at the MDN reference to the Backgrounds and Borders module to find out what its purpose is and the properties and features it contains. In that module, you will also find a link to Specifications that defines the technology (also see the section below).</p>
+                            <p>At this stage, you don't need to worry too much about how CSS is structured; however, it can make it easier to find information if, for example, you are aware that a certain property is likely to be found among other similar things, and is therefore, probably in the same specification.</p>
+                            <p>For a specific example, let's go back to the Backgrounds and Borders module — you might think that it makes logical sense for the background-color and border-color properties to be defined in this module. And you'd be right.</p>
+                        </div>
+
+                <div id="topic">CSS Specifications</div>
+                        <div id="article" class="article">
+                            <p>All web standards technologies (HTML, CSS, JavaScript, etc.) are defined in giant documents called specifications (or "specs"), which are published by standards organizations (such as the W3C, WHATWG, ECMA, or Khronos) and define precisely how those technologies are supposed to behave.</p>
+                            <p>CSS is no different — it is developed by a group within the W3C called the CSS Working Group. This group is made of representatives of browser vendors and other companies who have an interest in CSS. There are also other people, known as invited experts, who act as independent voices; they are not linked to a member organization.</p>
+                            <p>New CSS features are developed or specified by the CSS Working Group — sometimes because a particular browser is interested in having some capability, other times because web designers and developers are asking for a feature, and sometimes because the Working Group itself has identified a requirement. CSS is constantly developing, with new features becoming available. However, a key thing about CSS is that everyone works very hard to never change things in a way that would break old websites. A website built in 2000, using the limited CSS available then, should still be usable in a browser today!</p>
+                            <p>As a newcomer to CSS, it is likely that you will find the CSS specs overwhelming — they are intended for engineers to use to implement support for the features in user agents, not for web developers to read to understand CSS. Many experienced developers would much rather refer to MDN documentation or other tutorials. Nevertheless, it is worth knowing that these specs exist and understanding the relationship between the CSS you are using, the browser support (see below), and the specs.</p>
+                        </div>        
+                
+                <div id="topic">Browser support information</div>
+                        <div id="article" class="article">
+                            <p>After a CSS feature has been specified, then it is only useful for us in developing web pages if one or more browsers have implemented the feature. This means that the code has been written to turn the instruction in our CSS file into something that can be output to the screen. We'll look at this process more in the lesson How CSS works. It is unusual for all browsers to implement a feature at the same time, and so there is usually a gap where you can use some part of CSS in some browsers and not in others. For this reason, being able to check implementation status is useful.</p>
+                            <p>The browser support status is shown on every MDN CSS property page in a table named "Browser compatibility". Consult the information in that table to check if the property can be used on your website. For an example, see the browser compatibility table for the CSS font-family property.</p>
+                            <p>Based on your requirements, you can use the browser compatibility table to check how this property is supported across various browsers, or check if your specific browser and the version you have support the property, or if there are any caveats you should be aware of for the browser and version you are using.</p>
+                        </div>
+
+                 </section>
+
+
+                 <!--End css-->
+
+                 <!--<hr>-->
+                 <section class="main-section" id="javascript">
+                    <div id="topic">What is javascript ?</div>
+                            <div id="article" class="article">
+                                <p>JavaScript is a powerful programming language that can add interactivity to a website. It was invented by Brendan Eich.</p>
+                                <p>JavaScript is versatile and beginner-friendly. With more experience, you'll be able to create games, animated 2D and 3D graphics, comprehensive database-driven apps, and much more!</p>
+                                <p>JavaScript itself is relatively compact, yet very flexible. Developers have written a variety of tools on top of the core JavaScript language, unlocking a vast amount of functionality with minimum effort. These include:</p>
+                                    <ul>
+                                        <li>Browser Application Programming Interfaces (APIs) built into web browsers, providing functionality such as dynamically creating HTML and setting CSS styles; collecting and manipulating a video stream from a user's webcam, or generating 3D graphics and audio samples.</li>
+                                        <li>Third-party APIs that allow developers to incorporate functionality in sites from other content providers, such as Twitter or Facebook.</li>
+                                        <li>Third-party frameworks and libraries that you can apply to HTML to accelerate the work of building sites and applications.</li>
+                                    </ul>
+                            </div>
+
+                    <div id="topic">Hello World</div>
+                            <div id="article" class="article">
+                                 <p>To get started with writing JavaScript, open the Scratchpad and write your
+                                    first "Hello world" JavaScript code:
+                                    <code
+                                      >function greetMe(yourName) { alert("Hello " + yourName); }
+                                      greetMe("World");
+                                    </code>
+                              
+                                    Select the code in the pad and hit Ctrl+R to watch it unfold in your
+                                    browser!</p>
+                            </div>
+
+                        <div id="topic">Variable</div>
+                            <div id="article" class="article">
+                                <p>You use variables as symbolic names for values in your application. The
+                                    names of variables, called identifiers, conform to certain rules.</p>
+                                    <p>
+                                        A JavaScript identifier must start with a letter, underscore (_), or
+                                        dollar sign ($); subsequent characters can also be digits (0-9). Because
+                                        JavaScript is case sensitive, letters include the characters "A" through
+                                        "Z" (uppercase) and the characters "a" through "z" (lowercase).
+                                      </p>
+                                      <p>
+                                        You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers.
+                                        You can also use the Unicode escape sequences as characters in
+                                        identifiers. Some examples of legal names are Number_hits, temp99, and
+                                        _name.
+                                      </p>
+                            </div>
+
+                        <div id="topic">Variable Scope</div>
+                            <div id="article" class="article">
+                                <p>
+                                    When you declare a variable outside of any function, it is called a
+                                    global variable, because it is available to any other code in the
+                                    current document. When you declare a variable within a function, it is
+                                    called a local variable, because it is available only within that
+                                    function.
+                                  </p>
+                            
+                                  <p>
+                                    JavaScript before ECMAScript 2015 does not have block statement scope;
+                                    rather, a variable declared within a block is local to the function (or
+                                    global scope) that the block resides within. For example the following
+                                    code will log 5, because the scope of x is the function (or global
+                                    context) within which x is declared, not the block, which in this case
+                                    is an if statement.
+                                  </p>
+                                  <code>if (true) { var x = 5; } console.log(x); // 5</code>
+                                  <p>
+                                    This behavior changes, when using the let declaration introduced in
+                                    ECMAScript 2015.
+                                  </p>
+                            
+                                  <code
+                                    >if (true) { let y = 5; } console.log(y); // ReferenceError: y is not
+                                    defined</code>
+                                  
+                            </div>
+
+                        <div id="topic">Constant</div>
+                                <div id="article" div class="article">
+                                    <p>
+                                        You can create a read-only, named constant with the const keyword. The
+                                        syntax of a constant identifier is the same as for a variable
+                                        identifier: it must start with a letter, underscore or dollar sign and
+                                        can contain alphabetic, numeric, or underscore characters.
+                                      </p>
+                                
+                                      <code>const PI = 3.14;</code>
+                                      <p>
+                                        A constant cannot change value through assignment or be re-declared
+                                        while the script is running. It has to be initialized to a value.
+                                      </p>
+                                
+                                      <p>
+                                        The scope rules for constants are the same as those for let block scope
+                                        variables. If the const keyword is omitted, the identifier is assumed to
+                                        represent a variable.
+                                      </p>
+                                
+                                      <p>
+                                        You cannot declare a constant with the same name as a function or
+                                        variable in the same scope. For example:
+                                      </p>
+                                
+                                      <code
+                                        >// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS WILL
+                                        CAUSE AN ERROR ALSO function f() { const g = 5; var g; //statements
+                                        }</code>
+                                     
+                                        <p>However, object attributes are not protected, so the following statement
+                                      is executed without problems.</p>
+                                      <code
+                                        >const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";</code>
+                                </div>
+                </section>
+                <!--<hr id="#hr">--->
+                <!--section end CSS-->
+
+                <section class="main-section" id="php">
+                        <div id="topic">What is PHP</div>
+                            <div id="article" class="article">
+                                <p>PHP (a recursive initialism for PHP: Hypertext Preprocessor) is an open-source server-side scripting language that can be embedded into HTML to build web applications and dynamic websites.</p>
+                                <p>Basic syntax</p>
+                                    <code>  // start of PHP code
+                                        &lt;?php
+                                             // PHP code goes here
+                                         ?&gt;
+                                        // end of PHP code</code>
+                                <p>Printing data on screen</p>
+                                        <code>&lt;? echo "Hello World"? &gt;</code>
+                                <p>PHP variable</p>
+                                <code>&lt;?  // variables
+                                    $nome='Danilo';
+                                    $sobrenome='Santos';
+                                    $pais='Brasil';
+                                    $email='danilocarsan@gmail.com';
+                                   
+                                    // printing the variables
+                                    echo $nome;
+                                    echo $sobrenome;
+                                    echo $pais;
+                                    echo $email; ?&gt;</code>
+                            </div>
+ 
+
+                </section>
+
+                <section class="main-section" id="mysql">
+
+                    <div id="topic">What is MySql</div>
+                        <div id="article" class="article">
+                            <p>MySQL is a relational database management system (RDBMS) developed by Oracle that is based on structured query language (SQL).</p>
+
+                        </div>
+
+                    <div id="topic">Creative and Deleting a database</div>
+                        <div id="article" class="article">
+                            <p>You can create a new database using SQL command "CREATE DATABASE databaseName"; and delete a database using "DROP DATABASE databaseName". You could optionally apply condition "IF EXISTS" or "IF NOT EXISTS" to these commands. For example,</p>
+                                <code>mysql> CREATE DATABASE southwind;
+                                    Query OK, 1 row affected (0.03 sec)
+                                       
+                                    mysql> DROP DATABASE southwind;
+                                    Query OK, 0 rows affected (0.11 sec)
+                                       
+                                    mysql> CREATE DATABASE IF NOT EXISTS southwind;
+                                    Query OK, 1 row affected (0.01 sec)
+                                       
+                                    mysql> DROP DATABASE IF EXISTS southwind;
+                                    Query OK, 0 rows affected (0.00 sec)</code>
+                            <p><strong>IMPORTANT:</strong> Use SQL DROP (and DELETE) commands with extreme care, as the deleted entities are irrecoverable. <strong>THERE IS NO UNDO</strong></p>
+                        </div>
+
+                        <div if="topic">Setting the default database</div>
+                            <div id="article" class="article">
+                                    <p>The command "USE databaseName" sets a particular database as the default (or current) database. You can reference a table in the default database using tableName directly. But you need to use the fully-qualified databaseName.tableName to reference a table NOT in the default database.
+
+                                        In our example, we have a database named "southwind" with a table named "products". If we issue "USE southwind" to set southwind as the default database, we can simply call the table as "products". Otherwise, we need to reference the table as "southwind.products".
+                                        
+                                        To display the current default database, issue command "SELECT DATABASE()".</p>
+                            </div>
+
+                        <div id="topic">Creating and Deleting a Table</div>
+                            <div id="article" class="article">
+                                <p>You can create a new table in the default database using command "CREATE TABLE tableName" and "DROP TABLE tableName". You can also apply condition "IF EXISTS" or "IF NOT EXISTS". To create a table, you need to define all its columns, by providing the columns' name, type, and attributes.</p>
+                                <p>Let's create a table "products" in our database "southwind".</p>
+                                    <code>-- Remove the database "southwind", if it exists.
+                                        -- Beware that DROP (and DELETE) actions are irreversible and not recoverable!
+                                        mysql> DROP DATABASE IF EXISTS southwind;
+                                        Query OK, 1 rows affected (0.31 sec)
+                                         
+                                        -- Create the database "southwind"
+                                        mysql> CREATE DATABASE southwind;
+                                        Query OK, 1 row affected (0.01 sec)
+                                         
+                                        -- Show all the databases in the server
+                                        --   to confirm that "southwind" database has been created.
+                                        mysql> SHOW DATABASES;
+                                        +--------------------+
+                                        | Database           |
+                                        +--------------------+
+                                        | southwind          |
+                                        | ......             |
+                                         
+                                        -- Set "southwind" as the default database so as to reference its table directly.
+                                        mysql> USE southwind;
+                                        Database changed
+                                         
+                                        -- Show the current (default) database
+                                        mysql> SELECT DATABASE();
+                                        +------------+
+                                        | DATABASE() |
+                                        +------------+
+                                        | southwind  |
+                                        +------------+
+                                         
+                                        -- Show all the tables in the current database.
+                                        -- "southwind" has no table (empty set).
+                                        mysql> SHOW TABLES;
+                                        Empty set (0.00 sec)
+                                         
+                                        -- Create the table "products". Read "explanations" below for the column defintions
+                                        mysql> CREATE TABLE IF NOT EXISTS products (
+                                                 productID    INT UNSIGNED  NOT NULL AUTO_INCREMENT,
+                                                 productCode  CHAR(3)       NOT NULL DEFAULT '',
+                                                 name         VARCHAR(30)   NOT NULL DEFAULT '',
+                                                 quantity     INT UNSIGNED  NOT NULL DEFAULT 0,
+                                                 price        DECIMAL(7,2)  NOT NULL DEFAULT 99999.99,
+                                                 PRIMARY KEY  (productID)
+                                               );
+                                        Query OK, 0 rows affected (0.08 sec)
+                                         
+                                        -- Show all the tables to confirm that the "products" table has been created
+                                        mysql> SHOW TABLES;
+                                        +---------------------+
+                                        | Tables_in_southwind |
+                                        +---------------------+
+                                        | products            |
+                                        +---------------------+
+                                         
+                                        -- Describe the fields (columns) of the "products" table
+                                        mysql> DESCRIBE products;
+                                        +-------------+------------------+------+-----+------------+----------------+
+                                        | Field       | Type             | Null | Key | Default    | Extra          |
+                                        +-------------+------------------+------+-----+------------+----------------+
+                                        | productID   | int(10) unsigned | NO   | PRI | NULL       | auto_increment |
+                                        | productCode | char(3)          | NO   |     |            |                |
+                                        | name        | varchar(30)      | NO   |     |            |                |
+                                        | quantity    | int(10) unsigned | NO   |     | 0          |                |
+                                        | price       | decimal(7,2)     | NO   |     | 99999.99   |                |
+                                        +-------------+------------------+------+-----+------------+----------------+
+                                         
+                                        -- Show the complete CREATE TABLE statement used by MySQL to create this table
+                                        mysql> SHOW CREATE TABLE products \G
+                                        *************************** 1. row ***************************
+                                               Table: products
+                                        Create Table: 
+                                        CREATE TABLE `products` (
+                                          `productID`    int(10) unsigned  NOT NULL AUTO_INCREMENT,
+                                          `productCode`  char(3)           NOT NULL DEFAULT '',
+                                          `name`         varchar(30)       NOT NULL DEFAULT '',
+                                          `quantity`     int(10) unsigned  NOT NULL DEFAULT '0',
+                                          `price`        decimal(7,2)      NOT NULL DEFAULT '99999.99',
+                                          PRIMARY KEY (`productID`)
+                                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1</code>
+                            </div>
+                </section>
+           
+            
+
+            
+        </main>
+
+
+    </body>
+</html>
